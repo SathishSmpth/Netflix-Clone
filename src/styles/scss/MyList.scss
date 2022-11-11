@@ -1,0 +1,11 @@
+.my-list-page-container{
+    display: grid;
+    color: $font-color;
+    background-color:rgb(49, 44, 44);
+    font-family: $font-family;
+    justify-content: center;
+    align-items: center;
+
+    height: 550px;
+    width: 100%;
+}

@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    border-radius: none;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 890px) {
+    section{
+        margin: 0px;
+        padding: 10px;
+    }
+}
+@import "./variables.scss";
+@import "./App.scss";
+@import "./NavigationBar.scss";
+@import "./accountDropDown.scss";
+@import "./searchMenu.scss";
+@import "./HomePage.scss";
+@import "./TvShows.scss";
+@import "./Movies.scss";
+@import "./New&Popular.scss";
+@import "./MyList.scss";
+@import "./BrowseByLanguage.scss";
+@import "./searchPage.scss";
+@import "./MovieCard.scss";
+@import "./suggestionLists.scss";
+@import "./mixins.scss";

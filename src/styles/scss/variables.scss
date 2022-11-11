@@ -1,0 +1,9 @@
+$background-color: rgba(20, 20, 20);
+$font-size:14px;
+$font-color:#e5e5e5;
+$font-family:Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+@mixin font-theme {
+    $font-color:#e5e5e5;
+    $font-family:Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    $background-color: rgba(20, 20, 20);
+}

@@ -1,0 +1,37 @@
+.suggestion-container {
+    margin-top: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    background-color: $background-color;
+    height: auto;
+}
+
+.suggestions {
+    padding-left: 30px;
+    flex: 23%;
+    color: $font-color;
+}
+
+.suggestion-list {
+    flex: 70%;
+}
+
+.suggestion-titles {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.suggestion-border {
+    border-right: 1px solid rgb(129, 128, 128);
+}
+
+.movie-link {
+    text-decoration: none;
+    color: $font-color;
+    font-family: $font-family;
+    font-size: 16px;
+}

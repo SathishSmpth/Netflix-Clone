@@ -1,0 +1,30 @@
+.account-drop-down{
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-drop-down > img{
+    height: 32px;
+    width: 32px;
+    border-radius: 3px;
+}
+.account-drop-down:hover{
+    .account-drop-down-caret{
+        transform: rotate(180deg);
+    }
+}
+
+.account-drop-down-caret{
+    border-color: #fff transparent transparent;
+    border-style: solid;
+    border-width: 7px 7px 0;
+    height: 0; 
+    width: 0;
+    margin-left: 10px;
+    transition: transform 367ms cubic-bezier(.21,0,.07,1);
+}
+.account-drop-down-caret:hover{
+    transform: rotate(180deg);
+}

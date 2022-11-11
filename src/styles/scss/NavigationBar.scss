@@ -1,0 +1,126 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.navbar-container {
+    display: grid;
+    width: 100%;
+    height: 68px;
+    align-content: center;
+    background-color: $background-color;
+    font-size: $font-size;
+    @include fontTheme;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    padding: 5px 55px;
+}
+
+.navigation-bar {
+    display: flex;
+    width: 100%;
+
+    .navbar-nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    .primary-navigation-bar {
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+
+        .nav-link {
+            text-decoration: none;
+            @include fontTheme;
+            font-size: $font-size;
+        }
+
+        .nav-item {
+            padding: 0 10px;
+        }
+    }
+
+    .secondary-navigation-bar {
+        justify-content: flex-end;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        color: #ffff;
+
+        div {
+            padding: 0px 10px;
+        }
+
+        button {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+        }
+    }
+}
+
+.search-menu-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border: 1px solid #ffff;
+    align-content: center;
+    flex-wrap: wrap;
+
+    button {
+        img {
+            padding-top: 4px;
+        }
+    }
+
+    .searchInput {
+        padding-left: 5px;
+        border: none;
+        background-image: none;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .searchInput:focus {
+        outline: none;
+        color: $font-color;
+    }
+
+    .clear-button {
+        width: 5px;
+        position: absolute;
+        right: 8px;
+        top: -8px;
+        width: 13px;
+        height: 13px;
+        opacity: 1;
+    }
+
+    .clear-button:before,
+    .clear-button:after {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        content: ' ';
+        height: 18px;
+        width: 2px;
+        background-color: #fff;
+    }
+
+    .clear-button:before {
+        transform: rotate(45deg);
+    }
+
+    .clear-button:after {
+        transform: rotate(-45deg);
+    }
+}
