@@ -14,10 +14,10 @@ const MovieCard = ({searchResults}) => {
 
     return (
       <div className="card">
-        <div>
+        <div className="card-image-container">
           <img className="netflixLogo" src={netflixSymbol} alt=""/>
           <img
-            className="card-image-container"
+            className="card-image"
             src={posterUrl}
             alt={movie.original_title}
             onError={defaultImage}

@@ -1,9 +1,9 @@
+@import "./mixins.scss";
+
 .home-page-container{
+    @include fontTheme;
     display: grid;
-    border: 5px solid white;
-    color: $font-color;
-    background-color:rgb(49, 44, 44);
-    font-family: $font-family;
+    margin-top: 68px;
     align-items: center;
     justify-content: center;
     height: 550px;
