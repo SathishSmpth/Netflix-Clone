@@ -20,7 +20,7 @@ const App=()=> {
           setSearchResults(data.results)
         })
     }
-
+console.log(searchResults)
   }, [searchText])
   return(
     <div className="container">
