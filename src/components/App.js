@@ -22,8 +22,14 @@ const App = () => {
           setSearchResults(data.results);
         });
     }
+<<<<<<< HEAD
   }, [searchText]);
   return (
+=======
+console.log(searchResults)
+  }, [searchText])
+  return(
+>>>>>>> 3ea5d6fbfb5b92bd2437d32fa0eb4d90f776f450
     <div className="container">
       <NavigationBar searchText={searchText} setSearchText={setSearchText} />
       <Routes>
