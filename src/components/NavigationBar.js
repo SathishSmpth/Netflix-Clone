@@ -1,4 +1,4 @@
-import netflix from "../logo/netflixlogo.svg";
+ import netflix from "../logo/netflixlogo.svg";
 import search from "../icons/searchIcon.svg";
 import notification from "../icons/notificationIcon.svg";
 import AccountMenu from "./AccountMenu";

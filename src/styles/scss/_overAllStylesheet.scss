@@ -3,6 +3,9 @@
     border-radius: none;
     box-sizing: border-box;
 }
+body{
+    display: block;
+}
 
 @media only screen and (max-width: 890px) {
     section{
