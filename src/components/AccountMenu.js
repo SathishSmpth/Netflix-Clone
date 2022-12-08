@@ -5,6 +5,7 @@ const AccountMenu=()=>{
         <div className='account-drop-down' >
             <img src={accountMenuDropDownIcon} alt=""/>
             <span className="account-drop-down-caret"></span>
+<div></div>
         </div>
     );
 }
