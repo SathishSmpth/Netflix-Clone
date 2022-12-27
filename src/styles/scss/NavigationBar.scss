@@ -4,16 +4,15 @@
 .navbar-container {
     display: grid;
     width: 100%;
-    height: 68px;
     align-content: center;
     background-color: $background-color;
     font-size: $font-size;
     @include fontTheme;
-    position: fixed;
+    position: sticky;
     top: 0px;
     left: 0px;
     z-index: 9999;
-    padding: 5px 55px;
+    padding: 25px 55px;
 }
 
 .navigation-bar {

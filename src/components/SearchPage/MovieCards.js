@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import  netflixSymbol from "../../logo/netflixSymbol.svg";
+import netflixSymbol from "../../logo/netflixSymbol.svg";
 
 const MovieCard = ({ searchResults }) => {
   const Card = ({ movie }) => {
@@ -13,11 +13,7 @@ const MovieCard = ({ searchResults }) => {
     return (
       <div className="card">
         <div className="card-image-container">
-          <img
-            className="netflixLogo"
-            src={netflixSymbol}
-            alt=""
-          />
+          <img className="netflixLogo" src={netflixSymbol} alt="" />
           <img
             className="card-image"
             src={posterUrl}
@@ -37,10 +33,12 @@ const MovieCard = ({ searchResults }) => {
     );
   };
 
-  const CardResult = searchResults.map((obj, i) => {
-    return <Card movie={obj} key={i} />;
-  });
-
-  return <div className="card-container">{CardResult}</div>;
+ return (
+    <div className="card-container">
+      {searchResults?.map((obj, i) => (
+        <Card movie={obj} key={i} />
+      ))}
+    </div>
+  );
 };
 export default MovieCard;

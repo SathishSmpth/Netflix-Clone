@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import netflixSymbol from "../logo/netflixSymbol.svg";
+import netflixSymbol from "../../logo/netflixSymbol.svg";
 
-const Home = () => {
-
+const HeroBackdrop = () => {
   const [movie, setMovie] = useState("");
   const [movieId, setMovieId] = useState(Math.floor(Math.random() * 100000));
 
@@ -12,25 +11,23 @@ const Home = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        setMovie(data);
+        const release_dates = Number(data.release_date?.substring(0, 4));
+        if (data.adult === false && release_dates > 2000) {
+          setMovie(data);
+        } else {
+          randomNumber();
+        }
       });
   }, [movieId]);
 
-  if(movie.adult===true){
-    setMovieId(Math.floor(Math.random() * 1000000))
-  }
-  const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-  console.log(movie);
+  const randomNumber = () => setMovieId(Math.floor(Math.random() * 8000000));
+
+  const posterUrl = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
 
   return (
-    <div className="home-page-container">
-      <div className="home-page-back-drop">
-        <img
-         className="image"
-          src={posterUrl}
-          alt=""
-         onError={()=>{setMovieId(Math.floor(Math.random() * 1000000));}}
-        />
+    <div className="hero-backdrop-page-container">
+      <div className="hero-backdrop">
+        <img className="image" src={posterUrl} alt="" onError={randomNumber} />
         <div className="back-drop-content">
           <div className="title-section">
             <div className="logo-section">
@@ -51,4 +48,5 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+
+export default HeroBackdrop;
