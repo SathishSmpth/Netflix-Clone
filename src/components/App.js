@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
-import NavigationBar from "./NavigationBar";
-import SearchView from "./SearchPage/searchView";
-import Home from "./HomePage/HomePage";
-import TvShows from "./TvShows";
-import Movies from "./Movies";
-import NewAndPopular from "./New&Popular";
-import MyList from "./MyList";
-import BrowseByLanguage from "./BrowseByLanguage";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import MovieView from "./MovieView/MovieView";
+import NavigationBar from "./Navbar";
+import HomePage from "./HomePage/Home";
+import MovieCard from "./SearchPage/MovieCards";
+import TvShows from "./TvShows/TV";
+import NewAndPopuar from "./NewAndPopular/New&Popuar";
+import MovieView from "./MovieView/Movie";
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -35,18 +32,15 @@ const App = () => {
     <div className="container">
       <NavigationBar searchText={searchText} setSearchText={setSearchText} />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<HomePage />} />
         <Route
           path="/search"
           element={
-            <SearchView keyword={searchText} searchResults={searchResults} />
+            <MovieCard keyword={searchText} searchResults={searchResults} />
           }
         />
         <Route path="/tvshows" element={<TvShows />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/new&popular" element={<NewAndPopular />} />
-        <Route path="/mylist" element={<MyList />} />
-        <Route path="/browsebylanguage" element={<BrowseByLanguage />} />
+        <Route path="/new&popular" element={<NewAndPopuar />} />
         <Route path="/movies/:id" element={<MovieView/>}/>
       </Routes>
     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GenresCard from "./genresCard";
 
-const Action = () => {
+const ActionGenres = () => {
   const [thrillerMovie, setThrillerMovie] = useState();
 
   useEffect(() => {
@@ -27,4 +27,4 @@ const Action = () => {
   );
 };
 
-export default Action;
+export default ActionGenres;
